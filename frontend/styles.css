@@ -1,0 +1,47 @@
+/* CSS styles for the app with a dark theme */
+
+body {
+  background-color: #000000;
+  font-family: Arial,sans-serif;
+  color: #fff;
+  margin: 0;
+}
+
+h.container {
+  text-align: center;
+  margin: 50 px 0;
+}
+
+/* Style for the Start button */
+.container button {
+  background-color: #2b0000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor-pointer: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Humover and active feel for start button */
+.container button:hover {
+  background-color: #d30000;
+  color: #ff0000;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, .5);
+}
+
+/* Results area styles */
+#results-area {
+  background-color: #313131;
+  margin: 20px auto; 
+  padding: 20px;
+  border-radius: 5px;
+}
+
+#results-area li {
+  margin: 5px 0;
+  background-color: #2e2e2e;
+  padding: 5px;
+  border-bottom: 1px solid #333333;
+}
