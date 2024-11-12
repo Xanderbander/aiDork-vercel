@@ -2,22 +2,24 @@
 // Controls start button to start queries and display results using API call
 
 const startButton = document.getElementById('start-button');
-const resultArea = document.getElementById('results-area');
+const resultArea = document.getElementById('results');
+
 
 startButton.addEventListener('click', async () => {
-    await fetchResults();
-});
-
-function fetchResults() {
+    resultArea.innerHTML = ''; // Clear previous results
     try {
-        const response = await fetch('/backend/query_and_validation.py');
+        const response = await fetch('/api/query_and_validation');
         const data = await response.json();
-        data.results.forEach(res => {
+
+        // Display each result in the result area 
+        data.results.forEach(result => {
             const li = document.createElement('li');
-            li.innerText = res;
+            li.innerText = result;
             resultArea.appendChild(li);
         });
+
     } catch (error) {
-        console.error('Error fetching data', error);
+        console.error('Error fetching data', indexed error);
+        resultArea.innerHTML = "Error fetching data. Check console for details.";
     }
-}
+});
