@@ -1,47 +1,62 @@
-/* CSS styles for the app with a dark theme */
+/* CSS styles for the app with a dark, hacker-themed aesthetic */
 
 body {
-  background-color: #000000;
-  font-family: Arial,sans-serif;
-  color: #fff;
+  background-color: #000;
+  font-family: 'Courier New', Courier, monospace;
+  color: #ff0000; /* Blood-red text color */
   margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-h.container {
+container {
   text-align: center;
-  margin: 50 px 0;
 }
 
-/* Style for the Start button */
-.container button {
-  background-color: #2b0000;
-  color: #fff;
-  padding: 10px 20px;
+/* Horrible and title styles */
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  text-shadow: 0px 0px 10px #ff0000;
+}
+
+button {
+  background-color: #b30000;
   border: none;
-  cursor-pointer: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  margin-top: 20px;
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
 }
 
-/* Humover and active feel for start button */
-.container button:hover {
-  background-color: #d30000;
+button:hover {
+  background-color: #ff3333;
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.8);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+	results {
+  background-color: #1a1a1a;
   color: #ff0000;
-  box-shadow: 0 0px 10px rgba(0, 0, 0, .5);
-}
-
-/* Results area styles */
-#results-area {
-  background-color: #313131;
-  margin: 20px auto; 
   padding: 20px;
   border-radius: 5px;
+  margin-top: 20px;
+  max-width: 600px;
+  width: 100%;
 }
 
-#results-area li {
-  margin: 5px 0;
-  background-color: #2e2e2e;
-  padding: 5px;
-  border-bottom: 1px solid #333333;
+.container li {
+  background-color: #333;
+  margin: 10px 0;
+  padding: 10px;
+  list-style-type: none;
+  border-radius: 5px;
 }
